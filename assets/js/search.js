@@ -48,8 +48,8 @@ jQuery(function() {
                 results.forEach(function(result) {
                     var item = loaded_data[result.ref];
 
-                    // Build a snippet of HTML for this result
-                    var appendString = '<li><a href="{{ site.baseurl }}' + item.url + '">' + item.title + '</a></li>';
+		    // Build a snippet of HTML for this result
+                    var appendString = '<li><a href=".' + item.url + '">' + item.title + '</a></li>';
 
                     // Add it to the results
                     $search_results.append(appendString);
