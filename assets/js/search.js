@@ -1,4 +1,10 @@
 jQuery(function() {
+    // 修改为自己的 baseurl 的值
+    // 这里把 baseurl 写死了,因为 js 中无法解析 liquid 模板语言
+    var site = {
+    	baseurl: "/blog"
+    };
+    
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
     window.idx = lunr(function () {
@@ -9,7 +15,7 @@ jQuery(function() {
     });
 
     // Download the data from the JSON file we generated
-    window.data = $.getJSON('assets/search_data.json');
+    window.data = $.getJSON(site.baseurl + '/assets/search_data.json');
 
     // Wait for the data to load and add it to lunr
     window.data.then(function(loaded_data){
@@ -49,9 +55,9 @@ jQuery(function() {
                     var item = loaded_data[result.ref];
 
 		    // Build a snippet of HTML for this result
-                    var appendString = '<li><a href=".' + item.url + '">' + item.title + '</a></li>';
+                    var appendString = '<li><a href="' + site.baseurl + item.url + '">' + item.title + '</a></li>';
 
-                    // Add it to the results
+                    // Add it to the result
                     $search_results.append(appendString);
                 });
             } else {
