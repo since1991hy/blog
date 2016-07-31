@@ -9,7 +9,7 @@ jQuery(function() {
     });
 
     // Download the data from the JSON file we generated
-    window.data = $.getJSON('/assets/search_data.json');
+    window.data = $.getJSON('{{ site.baseurl }}/assets/search_data.json');
 
     // Wait for the data to load and add it to lunr
     window.data.then(function(loaded_data){
@@ -49,7 +49,7 @@ jQuery(function() {
                     var item = loaded_data[result.ref];
 
                     // Build a snippet of HTML for this result
-                    var appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
+                    var appendString = '<li><a href="{{ site.baseurl }}' + item.url + '">' + item.title + '</a></li>';
 
                     // Add it to the results
                     $search_results.append(appendString);
