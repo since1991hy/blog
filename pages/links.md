@@ -11,4 +11,5 @@ permalink: /links/
 > God made relatives. Thank God we can choose our friends.
 
 - [秋意浓](https://since1991hy.github.io/blog/)
+- [fumier](http:fumier.github.io)
 - to be continued...
