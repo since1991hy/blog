@@ -21,7 +21,7 @@ permalink: /about/
 
 * GitHub：[@since1991hy](https://github.com/since1991hy)
 * blog：[{{ site.title }}]({{ site.url }}{{ site.baseurl }}/)
-* mail: since1991hy@163.com
+* mail: <since1991hy@163.com>
 
 ## Skill Keywords
 
