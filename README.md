@@ -1,6 +1,6 @@
-# 码志
+# 秋意浓
 
-我的个人博客：<http://mazhuang.org>，欢迎 Star 和 Fork。
+我的个人博客：<https://since1991hy.github.io/blog>
 
 ## 概览
 
@@ -12,9 +12,9 @@
 
 ## 效果预览
 
-### [在线预览 &rarr;](http://mazhuang.org)
+### [在线预览 &rarr;](https://since1991hy.github.io/blog)
 
-![screenshot home](http://mazhuang.org/assets/images/screenshots/home.png)
+![screenshot home](https://since1991hy.github.io/blog/assets/images/screenshots/home.png)
 
 ## Fork 指南
 
@@ -26,13 +26,15 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 2. 修改域名。
 
-   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
+   如果你需要绑定自己的域名，那么请在根目录下添加 CNAME 文件，在其中填写自定义的域名。
 
 3. 修改配置。
 
    网站的配置基本都集中在 \_config.yml 文件中，将其中与个人信息相关的部分替换成你自己的，比如网站的 title、subtitle、duoshuo 和 Disqus 的用户名等。
 
-   **注意：** 因为 Disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus\_username 修改成你自己的。我对该缺陷的记录见 [Issues#2][3]。
+   **注意：** 
+   * 因为 Disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus\_username 修改成你自己的。
+   * Disqus 在国内有被“墙”的风险，根据个人情况选择评论系统（支持：Disuqs、多说、畅言）
 
 4. 删除我的文章与图片。
 
@@ -49,9 +51,9 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 ## 贴心提示
 
-1. 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
+1. 排版建议遵照一定的规范。
 
-2. 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
+2. 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][1]。
 
 ## 经验与思考
 
@@ -69,8 +71,6 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 ## 致谢
 
-本博客外观基于 [DONGChuan](http://dongchuan.github.io) 修改，感谢！
+本博客外观基于 [码志](http://mazhuang.org) 修改，感谢！
 
-[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
-[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
-[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
+[1]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
