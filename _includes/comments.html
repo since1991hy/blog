@@ -38,11 +38,11 @@
       {% if site.duoshuo_username %}
       <!-- Duoshuo Comment BEGIN -->
       <!-- 多说评论框 BEGIN -->
-      <div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
+      <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ site.baseurl }}{{ page.url }}"></div>
       <!-- 多说评论框 END -->
       <!-- 多说公共JS代码 BEGIN (一个网页只需插入一次) -->
       <script type="text/javascript">
-      var duoshuoQuery = {short_name:"{{ site.duoshuo_username }}"};
+      var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
         (function() {
           var ds = document.createElement('script');
           ds.type = 'text/javascript';ds.async = true;
