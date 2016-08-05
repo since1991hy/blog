@@ -1,6 +1,6 @@
 ---
 layout: post
-title: redis 简介
+title: redis 简介及下载安装
 categories: [redis, NoSQL]
 description: redis 简介
 keywords: redis, NoSQL
@@ -10,7 +10,7 @@ imgpath: /blog/images/2016_2H/
 
 ## 什么是 redis
 
-[官网](redis.io) 介绍如下：
+[官网](http://redis.io) 介绍如下：
 
 >Redis is an open source (BSD licensed), in-memory **data structure store**, used as database, cache and message broker.
 
@@ -26,7 +26,7 @@ Free & open source, high-performance, distributed memory object **caching system
 
 ## 下载安装
 
-### 1. 到 [官网](redis.io) 下载最新版或者最新 stable 版
+### 1. 到 [官网](http://redis.io) 下载最新版或者最新 stable 版
 
 ```bash
 cd /usr/local/src
