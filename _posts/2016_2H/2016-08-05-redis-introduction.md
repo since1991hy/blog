@@ -52,6 +52,7 @@ cd redis-3.2.3
 ### 4. 可选步骤 `make test`
 
 直接运行可能报错，提示需要安装 **tcl**
+
 ```bash
 # 安装 tcl 脚本库
 yum install tcl
@@ -99,7 +100,8 @@ vim /usr/local/redis/redis.conf
 再次启动 redis 服务器：  
 ![]({{ page.imgpath }}redis-startup-daemon.png)
 
-使用客户端进行连接：  
+使用客户端进行连接：
+
 ```bash
 # 进入 redis 安装目录
 cd /usr/local/redis
