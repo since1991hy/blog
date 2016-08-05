@@ -37,7 +37,7 @@ wget http://download.redis.io/releases/redis-3.2.3.tar.gz
 
 ### 2. 解压并进入目录
 
-```bash
+```shell
 # 解压
 tar -zxvf redis-3.2.3.tar.gz
 
