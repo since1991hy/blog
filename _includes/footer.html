@@ -53,5 +53,9 @@
       </script>
     </div>
     {% endif %}
+
+    {% if site.tencent.analytics_id %}
+	<script type="text/javascript" src="http://tajs.qq.com/stats?sId={{ site.tencent.analytics_id }}" charset="UTF-8"></script>
+    {% endif %}
 </body>
 </html>
