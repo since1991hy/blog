@@ -30,8 +30,11 @@ brpop/blpop key timeout | 等待弹出 key 的尾/头元素，timeout 为等待�
 task + back 双链表完成安全队列。
 
 业务逻辑：
+
 1. `rpoplpush task back`，返回 task 链表中的最后一项任务，并将其添加到 back 队列中。
+
 2. 接收返回值，并做业务处理。
+
 3. 如果业务处理成功，`rpop back` 清除任务；  
    如果不成功，下次从 back 链表中取任务去执行。
 
