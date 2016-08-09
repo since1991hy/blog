@@ -36,7 +36,7 @@ zunionstore destination numkeys key1 [key2...] [weights weight1 [weight2...]] [a
 
 :bell: 如果有交集，交集元素在各个集合中分别有自己的 score，`aggregate` 指定了聚合之后交集元素应该使用什么样的 score。
 
-* `aggregeate sum` : 各集合的 score 相加，作为聚合后的 score。
+* `aggregate sum` : 各集合的 score 相加，作为聚合后的 score。
 
 * `aggregate min` : 各集合中的 score 的最小值，作为聚合后的 score。
 
