@@ -59,7 +59,7 @@ SET post:$postID:data $serailizedPost
 
 获取文章数据的伪代码如下（以访问 ID 为 42 的文章为例）：
 
-```PHP
+```php
 # 从 Redis 中读取文章数据
 $serializedPost = GET post:42:data
 
