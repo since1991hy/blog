@@ -6,7 +6,7 @@ description: redis 简介
 keywords: redis, NoSQL
 imgpath: /blog/images/2016_2H/
 ---
->redis 是一个开源的，高级的 key-value 存储系统，可以用用来存储字符串，哈希结构，链表，集合，有序集合。因此，常用来提供数据结构服务。
+>redis（REmote DIctionary Server, 远程字典服务器） 是一个开源的，高级的 key-value 存储系统，可以用用来存储字符串，哈希结构，链表，集合，有序集合。通过提供多种键值数据类型来适应不同场景下的缓存与存储需求。同时 Redis 的诸多高级功能使其可以胜任消息队列、任务队列等不同的角色。
 
 ## 什么是 redis
 
