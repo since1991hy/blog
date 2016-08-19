@@ -6,7 +6,7 @@ description: redis 中 sorted set 类型的操作命令
 keywords: redis, NoSQL
 ---
 
-> redis 常见有序集合类操作命令手册。  
+> redis 常见有序集合类操作命令手册。有序集合类型（sorted set）的特点从它的名字中就可以猜到，它和集合（set）类型的区别就是**“有序”**二字。  
 > **sorted set** 允许进行排序，那么按照什么来排序呢，你肯定要给它一个排序因子或者叫排序的依据，所以 **sorted set** 中每个元素还要有一个排序因子或权重来作为排序的依据，我们统称为 **score**。
 
 ## 常见 sorted set 操作命令
@@ -86,6 +86,28 @@ redis 127.0.0.1:6379> zrange tmp 0 -1 withscores
 4)"7"
 
 ```
+
+## 实践
+
+### 实现按点击量排序
+
+要按照文章的点击量排序，就必须再额外使用一个有序集合类型的键来实现。在这个键中以文章的 ID 作为元素，以该文章的点击量作为该元素的分数。将该键命名为 `posts.page.view`，每次用户访问一篇文章时，博客程序就通过 `zincrby posts:page.view 1 文章 ID` 来更新访问量。
+
+需要按照点击量的顺序显示文章列表时，有序集合的用法与列表的用法大同小异。
+
+```php
+$postsPerPage = 10
+$start = ($currenPage - 1) * $postsPerPage
+$end = $currentPage * $postsPerPage - 1
+$postsID = ZREVRANGE posts:page.view $start $end
+for each $id in $postsID
+  $postData = HGETALL post:$id
+  print 文章标题：$postData.title
+```
+
+另外，之前介绍过使用字符串类型键 `post:文章 ID:page.view` 来记录单个文章的访问量，现在这个键已经不需要了，想要获得某篇文章的访问量可以通过 `zscore posts:page.view 文章ID` 来实现。
+
+最后，类似地，可以再使用一个有序集合，用文章的 ID 作为键，文章的发布时间的时间戳作为分数。借助 `zrevrangebyscore` 命令轻松获得指定时间范围内的文章列表。
 
 ## 更多
 
