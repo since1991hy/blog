@@ -39,8 +39,10 @@
        // hljs.initHighlightingOnLoad();
       });
     </script>
-    {% if site.google.analytics_id %}
+    <!-- 站点统计 -->
     <div style="display:none">
+    <!-- 谷歌分析 start -->
+    {% if site.google.analytics_id %}
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -51,7 +53,21 @@
         ga('send', 'pageview');
 
       </script>
-    </div>
     {% endif %}
+    <!-- 谷歌分析 end -->
+    <!-- 百度统计 start-->
+    {% if site.baidu.uuid %}
+      <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?{{ site.baidu.uuid }}";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    {% endif %}
+    <!-- 百度统计 end -->
+    </div>
 </body>
 </html>
